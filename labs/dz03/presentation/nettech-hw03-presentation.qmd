@@ -1,0 +1,121 @@
+---
+## Author
+author:
+  name: Гашимова Эсма Эльшан кызы
+  email: 1132247520@rudn.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+
+## Title
+title: Домашнее задание №3
+subtitle: Анализ трафика в Wireshark
+license: CC BY
+date: today
+date-format: "YYYY-MM-DD"
+---
+
+# Цели и задачи работы
+
+## Цель работы
+
+Изучить MAC-адресацию и выполнить анализ сетевого трафика в Wireshark.
+
+# MAC-адресация
+
+## Определение параметров сети
+
+![Параметры сетевого интерфейса](image/01.png){ #fig:001 width=85% }
+
+## MAC-адрес устройства
+
+MAC-адрес компьютера: `00:f8:1c:07:c4:41`.
+
+MAC-адрес шлюза: `c8:7f:54:78:b6:f2`.
+
+Адрес компьютера является индивидуальным и глобально администрируемым.
+
+# Анализ ICMP и ARP
+
+## Проверка доступности шлюза
+
+![Проверка ping шлюза](image/02.png){ #fig:002 width=85% }
+
+## ICMP Echo Request
+
+![ICMP Echo Request](image/03.png){ #fig:003 width=85% }
+
+## ICMP Echo Reply
+
+![ICMP Echo Reply](image/04.png){ #fig:004 width=85% }
+
+## ARP-запрос и ARP-ответ
+
+![ARP-запрос](image/05.png){ #fig:005 width=80% }
+
+## ARP-запрос и ARP-ответ
+
+![ARP-ответ](image/06.png){ #fig:006 width=80% }
+
+# Анализ внешнего ICMP-трафика
+
+## Ping внешнего узла
+
+![Ping внешнего узла](image/07.png){ #fig:007 width=85% }
+
+## ICMP к внешнему адресу
+
+![ICMP-запрос к внешнему узлу](image/08.png){ #fig:008 width=80% }
+
+## ICMP к внешнему адресу
+
+![ICMP-ответ от внешнего узла](image/09.png){ #fig:009 width=80% }
+
+# Анализ транспортного уровня
+
+## HTTP и TCP
+
+![HTTP-запрос](image/11.png){ #fig:011 width=85% }
+
+## HTTP-ответ
+
+![HTTP-ответ](image/12.png){ #fig:012 width=85% }
+
+## DNS и UDP
+
+![DNS-запрос](image/13.png){ #fig:013 width=85% }
+
+## DNS-ответ
+
+![DNS-ответ](image/14.png){ #fig:014 width=85% }
+
+## QUIC
+
+![QUIC Initial](image/15.png){ #fig:015 width=85% }
+
+## QUIC
+
+![QUIC 0-RTT](image/16.png){ #fig:016 width=85% }
+
+# TCP Handshake
+
+## Установление TCP-соединения
+
+![TCP handshake](image/17.png){ #fig:017 width=85% }
+
+## График потока TCP
+
+![График потока TCP](image/18.png){ #fig:018 width=85% }
+
+# Вывод
+
+## Вывод
+
+В ходе работы были изучены MAC-адресация и структура Ethernet-кадров.
+
+С помощью Wireshark были проанализированы протоколы ARP, ICMP, HTTP, DNS, TCP, UDP и QUIC.
+
+Было установлено, что TCP использует трёхэтапное соединение `SYN → SYN/ACK → ACK`, HTTP работает поверх TCP, а DNS и QUIC используют UDP.
